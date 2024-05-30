@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import Map from './Map';
 
-const socket = io('http://54.164.167.42:4000');
+const socket = io('https://programmerscrew.com:4000');
 
 function App() {
   const [positions, setPositions] = useState([]);
