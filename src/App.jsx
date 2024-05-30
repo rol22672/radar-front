@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import Map from './Map';
 
-const socket = io('https://programmerscrew.com:4000');
+const socket = io('https://radar-back.onrender.com');
 
 function App() {
   const [positions, setPositions] = useState([]);
@@ -37,6 +37,7 @@ function App() {
 
     socket.on('updateLocations', (locations) => {
       setPositions(locations);
+      console.log("locations update")
     });
 
     return () => {
